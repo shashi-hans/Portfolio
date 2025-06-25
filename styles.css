@@ -506,6 +506,19 @@ body {
     resize: vertical;
 }
 
+.project-link {
+    background: white;
+    padding: 15px 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    height: 60px;
+}
+
+.project-link-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hamburger {
