@@ -208,3 +208,74 @@ document.addEventListener('DOMContentLoaded', () => {
         // typeWriter(heroTitle, originalText, 50);
     }
 });
+
+  const projects = [
+    {
+      title: "Educational Application",
+      description:
+        "<b>EduVerse</b> is an educational application where everyone can explore courses, books and unlock their potential.",
+      link: "https://educational-verse.netlify.app/",
+      icon: "fas fa-globe",
+      tech: ["React.js", "TypeScript", "CSS3"],
+    },
+    {
+      title: "Bubbles Shooter Game",
+      description:
+        "Bubbles Shooter Game using Canvas JS. This project is built with: HTML5 (with inline JS and CSS).",
+      link: "https://shashi-hans.github.io/bubble_shooter_game/",
+      icon: "fas fa-gamepad",
+      tech: ["HTML5", "JavaScript", "CSS3"],
+    },
+    {
+      title: "URL Shortner App",
+      description:
+        "A simple URL shortening application built as MERN app. This project allows users to shorten long URLs and use short url for convenience.",
+      link: "https://url-shortning.netlify.app/",
+      icon: "fas fa-cut",
+      tech: ["React", "CSS3", "HTML5", "TypeScript", "Node.js"],
+    },
+     {
+      title: "Library Room",
+      description:
+        "Its a CRUD MERN App for maintaining Book list for a Library",
+      link: "https://library-mern-crud-app.netlify.app/",
+      icon: "fas fa-globe",
+      tech: ["React", "CSS3", "HTML5", "TypeScript", "Node.js"],
+    },
+    {
+      title: "Coming Soon",
+      image: "images/coming-soon.jpg",
+    },
+  ];
+
+  const grid = document.getElementById("projects-grid");
+
+  projects.forEach((project) => {
+    const card = document.createElement("div");
+    card.className = "project-card";
+
+    if (project.image) {
+      card.innerHTML = `<img src="${project.image}" alt="Coming soon" class="coming-soon"/>`;
+    } else {
+      const techTags = project.tech
+        .map((t) => `<span class="tech-tag">${t}</span>`)
+        .join("");
+
+      card.innerHTML = `
+        <div class="project-link-container">
+          <div class="project-image"><i class="${project.icon}"></i></div>
+          <a href="${project.link}" class="project-link" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-external-link-alt"></i> Visit Site
+          </a>
+        </div>
+        <div class="project-content">
+          <h3>${project.title}</h3>
+          <p>${project.description}</p>
+          <div class="project-tech">${techTags}</div>
+        </div>
+      `;
+    }
+
+    grid.appendChild(card);
+  });
+
