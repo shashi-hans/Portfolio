@@ -204,8 +204,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const subtitleText = "Frontend Developer";
   await sleep(300);
   await typeWriter(subtitle, subtitleText, 40);
-  const descriptionText =
-    "I'm Self-motivated Frontend Developer with hands-on experience in building detail-oriented, responsive, user-friendly web interfaces. Contributed to Live Production projects and collaborative development teams.";
+  const descriptionText = "Crafting intuitive, responsive, user-friendly web applications, with live production experience delivering scalable solutions. Explore my portfolio to see how I can help you.";
   await sleep(300);
   await typeWriter(description, descriptionText, 20);
   await sleep(300);
@@ -356,7 +355,6 @@ const skillsData = [
       { name: "Sass", icon: "fab fa-sass" },
       { name: "Tailwind", image: "images/tailwind_icon.png", alt: "Tailwind" },
       { name: "jQuery", image: "images/jquery_icon.png", alt: "jQuery" },
-      { name: "Knockout", image: "images/knockout_icon.png", alt: "Knockout" },
     ],
   },
   {
